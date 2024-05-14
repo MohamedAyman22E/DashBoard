@@ -1,0 +1,615 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  --color-black: #000;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+
+  --padding-1: 1.8rem;
+  --card-padding: 1.2rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+.big_container {
+  width: 100%;
+  background-color: var(--color-background);
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+}
+/* start navbar */
+.navBar {
+  width: 20%;
+  height: 100vh;
+  padding: 20px 0 20px 20px;
+}
+.navBar .logo,
+.navBar .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navBar .logo .close {
+  display: none;
+}
+.navBar .logo img {
+  width: 40px;
+  margin-right: 5px;
+}
+.navBar .logo .logoHeading {
+  font-size: 30px;
+  font-weight: 600;
+}
+.navBar .logo .logoHeading span {
+  color: var(--color-danger);
+}
+.nav {
+  margin-top: 50px;
+}
+.nav li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+  transition: 0.3s;
+  color: var(--color-dark);
+}
+.nav li a:hover {
+  transform: translateX(5px);
+}
+.nav li:first-child {
+  border-left: 6px solid var(--color-primary);
+  background-color: var(--color-light);
+}
+.first_span {
+  color: var(--color-primary);
+}
+.nav li:last-child {
+  margin-top: 100px;
+}
+/* start big container */
+.container {
+  width: 77%;
+  position: relative;
+  display: flex;
+}
+.left_container {
+  padding: 20px;
+  width: 75%;
+}
+.inputDate {
+  background-color: var(--color-light);
+  border: none;
+  outline: none;
+  padding: 4px;
+}
+/* start boxS */
+.totalBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.totalBox .box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--color-white);
+  padding: 15px;
+  border-radius: var(--card-border-radius);
+  width: 33.33%;
+}
+.totalBox .box .info .icons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  color: var(--color-white);
+}
+.totalBox .box .info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.totalBox .box .info .iconOne {
+  background-color: var(--color-primary-variant);
+}
+.totalBox .box .info .iconTwo {
+  background-color: var(--color-danger);
+}
+.totalBox .box .info .iconThree {
+  background-color: var(--color-success);
+}
+.totalBox .box .info .spanHeadingBox {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-black);
+  margin: 10px 0;
+}
+.totalBox .box .info .price {
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--color-black);
+}
+.totalBox .box .info .Date {
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--color-dark);
+  margin-top: 10px;
+}
+/* start progress */
+.totalBox .box .progress {
+  width: 92px;
+  height: 92px;
+  position: relative;
+}
+.totalBox .box .progress svg {
+  width: 7rem;
+  height: 7rem;
+  position: relative;
+}
+.totalBox .box .progress svg circle {
+  stroke-width: 14;
+  stroke: var(--color-primary);
+  fill: none;
+  stroke-linecap: round;
+  transform: translate(18px, 18px);
+  stroke-dasharray: 110;
+  stroke-dashoffset: 92;
+}
+.totalBox .box .progress.one svg circle {
+  stroke-dashoffset: -30;
+  stroke-dasharray: 200;
+}
+.totalBox .box .progress.Two svg circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 80;
+}
+.totalBox .box .progress.Three svg circle {
+  stroke-dashoffset: 35;
+  stroke-dasharray: 110;
+}
+.totalBox .box .progress .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 122%;
+  width: 122%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resentOrder {
+  margin: 10px 0;
+}
+/* start table */
+.resentOrders {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+}
+.resentOrders table {
+  width: 100%;
+  padding: var(--card-padding);
+  text-align: center;
+  margin-bottom: 10px;
+}
+table tbody td {
+  height: 2rem;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+  font-size: 11px;
+}
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+table tbody .declined {
+  color: var(--color-danger);
+}
+table tbody .pending {
+  color: var(--color-warning);
+}
+.link {
+  display: flex;
+  justify-content: center;
+}
+.showAll {
+  color: var(--color-dark);
+  font-weight: 600;
+}
+/* start right container */
+.right_container {
+  width: 28%;
+  padding: 20px 20px 20px 0;
+  position: relative;
+}
+.top_right_container {
+  display: flex;
+  flex-direction: column;
+}
+.right_container .top {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.right_container .top .left .menu {
+  display: none;
+}
+.right_container .top .right {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.right_container .top .toggle {
+  width: 50px;
+  height: 20px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  background-color: var(--color-light);
+}
+.right_container .top .toggle span {
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+.right_container .top .toggle span.active {
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  color: var(--color-white);
+}
+.right_container .top .infoName {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.right_container .top .infoName .info h2 {
+  font-size: 10px;
+}
+.right_container .top .infoName .info span {
+  color: var(--color-dark-variant);
+}
+.right_container .top .infoName .img img {
+  height: 40px;
+  border-radius: 50%;
+}
+/* start profile */
+.profile {
+  border-radius: var(--card-border-radius);
+  background-color: var(--color-white);
+  padding: 20px;
+}
+.profile ul {
+  display: flex;
+  flex-direction: column;
+}
+.profile ul li {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0;
+}
+.profile ul li .img img {
+  width: 40px;
+  border-radius: 50%;
+}
+.profile ul li .info h3 {
+  font-size: 12px;
+  color: var(--color-dark-variant);
+}
+.profile ul li .info h3 span {
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--color-black);
+}
+.SalesAnalytics {
+  margin-top: 20px;
+  font-size: 20px;
+}
+/* start analytics */
+.analytics {
+  display: flex;
+  flex-direction: column;
+}
+.analytics li {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  margin: 5px 0;
+  border-radius: var(--border-radius-2);
+  padding: 15px 20px;
+}
+.analytics li.liFour {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  margin: 5px 0;
+  border-radius: var(--border-radius-2);
+  border: 2px dashed var(--color-primary);
+  padding: 15px 20px;
+  color: var(--color-primary);
+}
+.analytics li.liFour .add {
+  display: flex;
+  justify-content: center;
+}
+.analytics li .allIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 65px;
+  font-size: 00px;
+}
+.analytics li .allIcon.iconOne {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.analytics li .allIcon.iconTwo {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+.analytics li .allIcon.iconThree {
+  background-color: var(--color-success);
+  color: var(--color-white);
+}
+.analytics li .info h2 {
+  color: var(--color-black);
+  font-size: 12px;
+}
+.analytics li .info h3 {
+  font-size: 10px;
+  color: var(--color-dark);
+}
+.analytics li .parseIntNumber.one,
+.parseIntNumber.three {
+  color: var(--color-success);
+  font-size: 10px;
+}
+.analytics li .parseIntNumber.two {
+  color: var(--color-danger);
+  font-size: 10px;
+}
+.analytics li .num {
+  font-size: 10px;
+  color: var(--color-dark);
+}
+@media (max-width: 1500px) {
+  .totalBox {
+    flex-wrap: wrap;
+  }
+  .totalBox .box {
+    width: 48%;
+  }
+}
+@media (max-width: 1247px) {
+  .totalBox {
+    flex-wrap: wrap;
+  }
+  .totalBox .box {
+    width: 48%;
+  }
+}
+@media (max-width: 1203px) {
+  .navBar {
+    width: 6%;
+  }
+  .navItem {
+    display: none;
+  }
+  .container {
+    width: 94%;
+  }
+  .left_container {
+    width: 75%;
+  }
+  .right_container {
+    width: 25%;
+  }
+  .navBar .logo .logoHeading {
+    display: none;
+  }
+  .nav li a {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+  }
+  .totalBox .box .info .spanHeadingBox {
+    font-size: 11px;
+  }
+  .totalBox .box .info .price {
+    font-size: 25px;
+  }
+  .totalBox .box .info .Date {
+    font-size: 10px;
+  }
+  .analytics li .info h2 {
+    font-size: 8px;
+  }
+  .analytics li .info h3 {
+    font-size: 8px;
+  }
+}
+@media (max-width: 982px) {
+  .left_container {
+    width: 50%;
+  }
+  .right_container {
+    width: 50%;
+  }
+  .totalBox {
+    flex-direction: column;
+  }
+  .totalBox .box {
+    width: 100%;
+  }
+  .navBar {
+    width: 10%;
+    height: 100vh;
+    padding: 20px;
+  }
+  .totalBox .box .progress svg {
+    width: 7rem;
+    height: 7rem;
+  }
+  .totalBox .box .progress {
+    transform: translate(18px, -5px);
+  }
+  .navBar {
+    padding: 20px 0 20px 20px;
+  }
+  .resentOrders {
+    position: relative;
+    bottom: 0;
+    width: 210%;
+  }
+}
+@media (max-width: 716px) {
+  .navBar {
+    display: block;
+    width: 35%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 110011;
+    padding: 20px;
+    background-color: var(--color-white);
+    transition: 0.3s;
+  }
+  .navBar.active {
+    left: 0%;
+  }
+  .navItem {
+    display: block;
+  }
+  .navBar .logo .logoHeading {
+    display: block;
+  }
+  .navBar .logo .close {
+    display: block;
+    cursor: pointer;
+  }
+  .navBar .logo img {
+    width: 30px;
+  }
+  .navBar .logo .logoHeading {
+    font-size: 20px;
+  }
+  .container {
+    width: 100%;
+    margin-top: 60px;
+  }
+  .totalBox .box .progress {
+    transform: translate(-22px, -7px);
+  }
+  .resentOrder {
+    margin-top: 40px;
+  }
+  .right_container .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 10px 20px;
+    align-items: center;
+    z-index: 10000;
+  }
+  .right_container .top .left .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .right_container .top .right {
+    align-items: center;
+  }
+}
+@media (max-width: 619px) {
+  .container {
+    flex-direction: column;
+  }
+  .left_container,
+  .right_container {
+    width: 100%;
+  }
+  .right_container {
+    padding: 20px;
+  }
+  .totalBox {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .totalBox .box {
+    width: 48%;
+  }
+  .resentOrders {
+    width: 100%;
+  }
+  table tbody tr .delete {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .navBar {
+    width: 45%;
+  }
+  table .number {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .totalBox {
+    flex-direction: column;
+  }
+  .totalBox .box {
+    width: 100%;
+  }
+  .totalBox .box .info .spanHeadingBox {
+    font-size: 20px;
+  }
+  .totalBox .box .info .price {
+    font-size: 30px;
+  }
+  .totalBox .box .info .Date {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  table thead tr {
+    font-size: 12px;
+  }
+  .navBar {
+    width: 55%;
+  }
+}
+@media (max-width: 390px) {
+  table thead tr {
+    font-size: 10px;
+  }
+  table tbody td {
+    font-size: 8px;
+  }
+}
