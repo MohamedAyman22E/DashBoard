@@ -33,6 +33,16 @@
   font-family: "Poppins", sans-serif;
   user-select: none;
 }
+body.moon {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-black: #fff;
+  --color-dark-variant: #a3bdcc;
+}
+h2 {
+  color: var(--color-black);
+}
 .big_container {
   width: 100%;
   background-color: var(--color-background);
@@ -105,6 +115,7 @@
   border: none;
   outline: none;
   padding: 4px;
+  color: var(--color-black);
 }
 /* start boxS */
 .totalBox {
@@ -129,7 +140,7 @@
   text-align: center;
   line-height: 50px;
   font-size: 30px;
-  color: var(--color-white);
+  color: #fff;
 }
 .totalBox .box .info {
   width: 50%;
@@ -203,6 +214,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-black);
 }
 .resentOrder {
   margin: 10px 0;
@@ -217,6 +229,9 @@
   padding: var(--card-padding);
   text-align: center;
   margin-bottom: 10px;
+}
+table thead {
+  color: var(--color-black);
 }
 table tbody td {
   height: 2rem;
@@ -277,11 +292,11 @@ table tbody .pending {
   width: 50%;
   text-align: center;
   cursor: pointer;
+  color: #fff;
 }
 .right_container .top .toggle span.active {
   background-color: var(--color-primary);
   border-radius: 5px;
-  color: var(--color-white);
 }
 .right_container .top .infoName {
   display: flex;
